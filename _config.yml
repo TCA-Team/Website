@@ -1,0 +1,27 @@
+title: TUM Apps
+description: > # this means to ignore newlines until "baseurl:"
+  TUM mobile apps for everybody
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "campus.tum.app" # the base hostname & protocol for your site
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+facebook:
+  app_id:
+
+social:
+  name: TUM Campus App
+  link: "https://www.facebook.com/TUMCampus/"
+
+include: ['_pages']
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: "_assets/images"
+    values:
+      image: true

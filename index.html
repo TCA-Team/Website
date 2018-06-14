@@ -1,0 +1,27 @@
+---
+layout: def
+
+---
+
+
+<div class="txt">
+    <h1><strong>#LGBTUM</strong> Exzellenz ist Bunt!</h1>
+    <p class="switch_lang"><a href="/en">[EN]</a></p>
+    <h2>Die Studentische Vertretung der Technischen Universität München stellt dieses Jahr einen Wagen für den Christopher Street Day! Du willst teilnehmen? Hier die Eckdaten:</h2>
+    <br /><br />
+    <h2>
+        {% for data in site.data.eckdaten %}
+        <strong>{{data.question}}</strong>
+        {{data.answer}}
+        <br />
+        {% endfor %}
+    </h2>
+</div>
+
+<div class="btns">
+    <a class="reload btn" href="https://helfen.fs.tum.de/CSD2018/">Jetzt Anmelden</a>
+    <div class="txt">
+        <p>Bitte beachte, dass es sich um ein Angebot ausschließlich für TUM Studierende handelt. Bitte melde dich unbedingt mit deiner TUM e-Mail Adresse an.</p>
+    </div>
+    <a class="text-btn" href="https://helfen.fs.tum.de/CSD2018Helfer" style="color: whitesmoke">Wir suchen auch noch Helfer!</a>
+</div>

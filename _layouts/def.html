@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css" type="text/javascript">
+        {% include /css/onepage-scroll.css %}
+        {% include /css/main.css %}
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="black">
+
+    <title>TUM Apps️</title>
+    <meta name="description" content="TUM Mobile Apps" />
+</head>
+
+<body id="page-top" class="index, disabled-onepage-scroll">
+
+<div class="wrapper">
+    <div class="main">
+
+        <div class="fullscreen-bg">
+            <video autoplay preload="auto" loop="loop" muted="muted" poster="assets/images/tum_rainbow_smaller.jpg" class="fullscreen-bg__video">
+                <source src="assets/videos/stitces.webm" type="video/webm">
+                <source src="assets/videos/stitces.mp4" type="video/mp4">
+                <source src="assets/videos/stitces.ogv" type="video/ogg">
+            </video>
+        </div>
+
+        <section id="section07" class="page1">
+            <div class="page_container" style="height: 100%;">
+                <div class="tumlogo">
+                    <img src="assets/images/TUMrainbowsmall.png">
+                </div>
+
+
+                <div class="scroll"><span></span><span></span><span></span></div>
+            </div>
+        </section>
+
+        <section class="page2">
+            <div class="page_container" style="height: 100%">
+
+                {{ content }}
+
+                <div class="pics">
+                    {% for image in site.static_files %}
+                    {% if image.path contains 'assets/photos' %}
+                    <img src="{{ image.path }}" height="350px" alt="">
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+                <div class="credit txt">
+                    Event organization: <a href="http://bruck.me" target="blank">Kordian Bruck</a> <br />
+                    Webpage & UI: <a href="http://dallago.us" target="blank">Christian Dallago</a> <br />
+                    Design & Gfx: <a href="#">Benedict Gruber</a> <br />
+                    Logo: <a href="http://lepuschitz.design" target="blank">Simon Lepuschitz</a> <br />
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="assets/one.js"></script>
+
+<script>
+    onePageScroll(".main", {
+        sectionContainer : "section",
+        loop : true,
+        updateURL: false,
+        pagination: false,
+        responsiveFallback : false
+    });
+</script>
+
+</body>
+</html>
